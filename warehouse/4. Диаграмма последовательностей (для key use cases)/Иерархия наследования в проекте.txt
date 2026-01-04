@@ -1,0 +1,11 @@
+                           Entity (Абстрактный)
+                                 ▲
+                                 │
+                  ┌──────────────┼──────────────┐
+                  │              │              │
+              Product          Order        Employee
+                  ▲
+                  │
+          ┌───────┴───────┐
+          │               │
+  ClothingProduct    FoodProduct

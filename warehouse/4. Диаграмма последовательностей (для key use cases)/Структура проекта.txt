@@ -1,0 +1,60 @@
+warehouse_management_system/
+├── src/                           # Исходный код
+│   ├── domain/                   # Доменный слой
+│   │   ├── entities/             # Сущности
+│   │   │   ├── product.py
+│   │   │   ├── order.py
+│   │   │   └── employee.py
+│   │   ├── value_objects/        # Объекты-значения
+│   │   │   ├── money.py
+│   │   │   └── address.py
+│   │   ├── repositories/         # Интерфейсы репозиториев
+│   │   │   └── product_repository.py
+│   │   └── services/             # Доменные сервисы
+│   │       └── pricing_service.py
+│   ├── application/              # Слой приложения
+│   │   ├── use_cases/            # Use Cases
+│   │   │   ├── product_management.py
+│   │   │   └── order_processing.py
+│   │   ├── dto/                  # Data Transfer Objects
+│   │   │   └── product_dto.py
+│   │   └── services/             # Сервисы приложения
+│   │       └── report_service.py
+│   ├── infrastructure/           # Инфраструктурный слой
+│   │   ├── persistence/          # Репозитории
+│   │   │   ├── sqlite/
+│   │   │   │   └── product_repository.py
+│   │   │   └── csv/
+│   │   │       └── product_repository.py
+│   │   ├── external/             # Внешние сервисы
+│   │   │   └── email_service.py
+│   │   └── config/               # Конфигурация
+│   │       └── database.py
+│   └── presentation/             # Слой представления
+│       ├── gui/                  # Графический интерфейс
+│       │   ├── main_window.py
+│       │   └── product_window.py
+│       └── api/                  # REST API (опционально)
+│           └── product_api.py
+├── tests/                        # Тесты
+│   ├── unit/                     # Модульные тесты
+│   │   ├── test_product.py
+│   │   └── test_order.py
+│   ├── integration/              # Интеграционные тесты
+│   │   └── test_repositories.py
+│   └── e2e/                      # End-to-end тесты
+│       └── test_gui.py
+├── docs/                         # Документация
+│   ├── uml/                      # UML диаграммы
+│   ├── api/                      # API документация
+│   └── user_guide/               # Руководство пользователя
+├── docker/                       # Docker конфигурации
+│   ├── Dockerfile
+│   └── docker-compose.yml
+├── scripts/                      # Скрипты
+│   ├── setup.py                  # Установка
+│   └── backup.py                 # Резервное копирование
+├── .gitignore                    # Игнорируемые файлы Git
+├── requirements.txt              # Зависимости Python
+├── README.md                     # Описание проекта
+└── LICENSE                       # Лицензия
